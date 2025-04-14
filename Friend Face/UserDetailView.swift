@@ -16,11 +16,14 @@ struct UserDetailView: View {
             Section("User Details") {
                 Text(user.name)
                     .font(.headline)
-                Text("Registered: \(user.registered)")
+                Text("Registered: \(user.formattedDate)")
                 Text("Age: \(user.age)")
                 Text("Email: \(user.email)")
                 Text("Address: \(user.address)")
                 Text("Works for: \(user.company)")
+            }
+            Section("About") {
+                Text(user.about)
             }
             Section("Friends") {
                 ForEach(user.friends) { friend in
